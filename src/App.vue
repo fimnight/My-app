@@ -1,60 +1,56 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
+    <v-app-bar app color="white" light>
+      <v-toolbar-title class="ml-4">
+        <v-img src="/Genshin_Impact_Logo.png" max-height="30" contain></v-img>
+      </v-toolbar-title>
 
       <v-spacer></v-spacer>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+      <v-toolbar-items class="hidden-sm-and-down">
+        <v-btn text to="/">Home</v-btn>
+        <v-btn text to="/search">Search</v-btn>
+        <v-btn text to="/message">Message</v-btn>
+        <v-divider vertical class="mx-2"></v-divider>
+        <v-btn text>Log In</v-btn>
+        <v-btn color="primary">Sign Up</v-btn>
+      </v-toolbar-items>
+
+      <v-app-bar-nav-icon class="hidden-md-and-up"></v-app-bar-nav-icon>
+
+      <v-btn icon class="ml-2">
+        <v-icon>mdi-account-outline</v-icon>
       </v-btn>
+      <v-btn icon>
+        <v-icon>mdi-plus</v-icon>
+      </v-btn>
+
     </v-app-bar>
 
     <v-main>
-      <HelloWorld/>
-    </v-main>
+      <router-view /> </v-main>
+
+    <v-footer app>
+      <span>&copy; {{ new Date().getFullYear() }}</span>
+    </v-footer>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-
 export default {
   name: 'App',
-
-  components: {
-    HelloWorld,
-  },
-
-  data: () => ({
-    //
-  }),
 };
 </script>
+
+<style>
+/* คุณสามารถเพิ่ม Global Styles ที่นี่ */
+/* กำหนดสีพื้นหลังหลักของ v-app ให้เป็นสีอ่อนๆ */
+.v-application {
+  background-color: #F8F9FA !important; /* สีเทาอ่อน */
+}
+
+/* เพิ่ม styles สำหรับ v-app-bar-nav-icon ถ้าคุณใช้มัน */
+.v-app-bar-nav-icon {
+  margin-right: 0px !important; /* ลบระยะห่างด้านขวาถ้าต้องการให้โลโก้ชิดซ้ายสุด */
+}
+</style>

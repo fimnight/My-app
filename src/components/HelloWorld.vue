@@ -1,90 +1,97 @@
 <template>
-  <v-container>
-    <v-row class="text-center">
-      <v-col cols="12">
-        <v-img
-          :src="require('../assets/logo.svg')"
-          class="my-3"
-          contain
-          height="200"
-        />
+  <v-container fluid class="pa-6">
+    <v-card class="hero-card pa-0 rounded-xl elevation-0 mb-8" color="#E6F0FF">
+      <v-row no-gutters align="center">
+        <v-col cols="12" md="7" class="pa-6">
+          <v-img src="/genshin-logo-mini.png" max-height="25" contain position="left" class="mb-4"></v-img>
+          <div class="text-h4 font-weight-bold mb-2">Layla</div>
+          <p class="text-subtitle-1 grey--text text--darken-2 mb-4">
+            She is a student in the Rtawahist Darshan,<br>
+            specializing in Theoretical Astrology.
+          </p>
+          <v-btn color="#99CCFF" dark large rounded>Read More</v-btn>
+        </v-col>
+        <v-col cols="12" md="5" class="d-flex align-end justify-end">
+          <v-img src="/layla-hero.png" contain max-height="300" class="hero-image"></v-img>
+        </v-col>
+      </v-row>
+    </v-card>
+
+    <v-row>
+      <v-col cols="12" md="7">
+        <div class="d-flex justify-space-between align-center mb-4">
+          <div class="text-h6 font-weight-bold">Artwork</div>
+          <v-btn text small color="primary">
+            View More
+            <v-icon right>mdi-chevron-right</v-icon>
+          </v-btn>
+        </div>
+        <v-row>
+          <v-col cols="6" sm="4" md="4" lg="3">
+            <v-card class="artwork-card rounded-lg elevation-0">
+              <v-img src="/artwork1.jpg" aspect-ratio="1" class="rounded-lg"></v-img>
+              <div class="text-caption grey--text text--darken-1 text-center py-2">by @sukacchi</div>
+            </v-card>
+          </v-col>
+          <v-col cols="6" sm="4" md="4" lg="3">
+            <v-card class="artwork-card rounded-lg elevation-0">
+              <v-img src="/artwork2.jpg" aspect-ratio="1" class="rounded-lg"></v-img>
+              <div class="text-caption grey--text text--darken-1 text-center py-2">by @RenChain</div>
+            </v-card>
+          </v-col>
+          </v-row>
       </v-col>
 
-      <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mb-3">
-          Welcome to Vuetify
-        </h1>
+      <v-col cols="12" md="5">
+        <div class="text-h6 font-weight-bold mb-4">Recent Search</div>
+        <v-card class="recent-search-card pa-4 rounded-xl elevation-0 mb-6">
+          <v-chip-group column>
+            <v-chip class="custom-chip" close>
+              <v-icon left>mdi-magnify</v-icon> Layla ascension material
+            </v-chip>
+            <v-chip class="custom-chip" close>
+              <v-icon left>mdi-magnify</v-icon> Layla build
+            </v-chip>
+            <v-chip class="custom-chip" close>
+              <v-icon left>mdi-magnify</v-icon> kalpalata lotus locations
+            </v-chip>
+            <v-chip class="custom-chip" close>
+              <v-icon left>mdi-magnify</v-icon> Layla cosplay
+            </v-chip>
+            <v-chip class="custom-chip" close>
+              <v-icon left>mdi-magnify</v-icon> Layla Wallpaper
+            </v-chip>
+          </v-chip-group>
+        </v-card>
 
-        <p class="subheading font-weight-regular">
-          For help and collaboration with other Vuetify developers,
-          <br>please join our online
-          <a
-            href="https://community.vuetifyjs.com"
-            target="_blank"
-          >Discord Community</a>
-        </p>
-      </v-col>
-
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          What's next?
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(next, i) in whatsNext"
-            :key="i"
-            :href="next.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ next.text }}
-          </a>
-        </v-row>
-      </v-col>
-
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          Important Links
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(link, i) in importantLinks"
-            :key="i"
-            :href="link.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ link.text }}
-          </a>
-        </v-row>
-      </v-col>
-
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          Ecosystem
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ eco.text }}
-          </a>
+        <v-row>
+          <v-col cols="12" sm="6">
+            <v-card class="info-card pa-4 rounded-xl elevation-0 text-center">
+              <v-avatar size="64" class="mb-2">
+                <v-img src="/cryo-icon.png"></v-img>
+              </v-avatar>
+              <div class="text-h6 font-weight-bold">Cryo character</div>
+              <div class="text-caption grey--text text--darken-1">The elemental skill for the character is ...</div>
+            </v-card>
+          </v-col>
+          <v-col cols="12" sm="6">
+            <v-card class="info-card pa-4 rounded-xl elevation-0 text-center">
+              <v-avatar size="64" class="mb-2">
+                <v-img src="/sumeru-icon.png"></v-img>
+              </v-avatar>
+              <div class="text-h6 font-weight-bold">Sumeru</div>
+              <div class="text-caption grey--text text--darken-1">Sumeru is one of the seven regions of Teyvat. It is known for its vast ...</div>
+            </v-card>
+          </v-col>
+          <v-col cols="12">
+            <v-card class="info-card pa-4 rounded-xl elevation-0">
+              <v-avatar size="64" class="mb-2 mr-4 float-left">
+                <v-img src="/akademiya-icon.png"></v-img>
+              </v-avatar>
+              <div class="text-h6 font-weight-bold">Akademiya</div>
+              <div class="text-caption grey--text text--darken-1">The Sumeru Akademiya is Sumeru's main governing body, as well as the ...</div>
+            </v-card>
+          </v-col>
         </v-row>
       </v-col>
     </v-row>
@@ -92,60 +99,42 @@
 </template>
 
 <script>
-  export default {
-    name: 'HelloWorld',
-
-    data: () => ({
-      ecosystem: [
-        {
-          text: 'vuetify-loader',
-          href: 'https://github.com/vuetifyjs/vuetify-loader',
-        },
-        {
-          text: 'github',
-          href: 'https://github.com/vuetifyjs/vuetify',
-        },
-        {
-          text: 'awesome-vuetify',
-          href: 'https://github.com/vuetifyjs/awesome-vuetify',
-        },
-      ],
-      importantLinks: [
-        {
-          text: 'Documentation',
-          href: 'https://vuetifyjs.com',
-        },
-        {
-          text: 'Chat',
-          href: 'https://community.vuetifyjs.com',
-        },
-        {
-          text: 'Made with Vuetify',
-          href: 'https://madewithvuejs.com/vuetify',
-        },
-        {
-          text: 'Twitter',
-          href: 'https://twitter.com/vuetifyjs',
-        },
-        {
-          text: 'Articles',
-          href: 'https://medium.com/vuetify',
-        },
-      ],
-      whatsNext: [
-        {
-          text: 'Explore components',
-          href: 'https://vuetifyjs.com/components/api-explorer',
-        },
-        {
-          text: 'Select a layout',
-          href: 'https://vuetifyjs.com/getting-started/pre-made-layouts',
-        },
-        {
-          text: 'Frequently Asked Questions',
-          href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions',
-        },
-      ],
-    }),
-  }
+export default {
+  name: 'HomeView',
+}
 </script>
+
+<style scoped>
+.hero-card {
+  background: linear-gradient(to right, #E6F0FF, #CCEEFF); /* Adjust gradient colors */
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 100%; /* Ensure image fits within its container */
+  height: auto;
+}
+
+.hero-card .v-btn {
+  text-transform: none; /* เพื่อไม่ให้ตัวอักษรเป็นตัวพิมพ์ใหญ่ทั้งหมด */
+}
+
+/* Custom Chip styles */
+.custom-chip {
+  background-color: #E0E0E0 !important; /* Background color for chips */
+  color: #424242 !important; /* Text color for chips */
+  border-radius: 8px !important;
+  font-weight: 500;
+  padding: 0 10px;
+}
+
+/* Card styles for Artwork and Info */
+.artwork-card, .recent-search-card, .info-card {
+  background-color: white !important; /* พื้นหลังสีขาว */
+  border: 1px solid #E0E0E0; /* Border สีเทาอ่อน */
+}
+</style>
